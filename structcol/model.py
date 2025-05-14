@@ -62,7 +62,7 @@ class Particle:
         self.index = index
         # store sizes in internal units and strip units after saving them
         self.original_units = size.units
-        self.size = size.to_preferred().magnitude
+        self.size = size.to_preferred().magnitude # so size is now just a number without units
         self.current_units = size.to_preferred().units
 
     @property
